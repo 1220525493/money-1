@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "src/assets/style/helper.scss";
 nav{
 display: flex;
   box-shadow: 0 0 3px rgba(0,0,0,0.3);
@@ -42,7 +43,7 @@ display: flex;
     }
   }
   > .item.selected{
-    color: pink;
+    color: $color-highlight;
   }
 }
 
