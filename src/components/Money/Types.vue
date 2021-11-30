@@ -23,9 +23,7 @@ export default class types extends Vue {
     }
     this.type = type;
   }
-  mounted(){
-    console.log(this.xxx);
-  }
+
 }
 
 
