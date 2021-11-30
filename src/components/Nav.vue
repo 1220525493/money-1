@@ -26,6 +26,8 @@ export default {
 <style lang="scss" scoped>
 @import "src/assets/style/helper.scss";
 nav{
+  @extend %outerShadow;
+  @extend %innerShadow;
 display: flex;
   box-shadow: 0 0 3px rgba(0,0,0,0.3);
   flex-direction: row;
