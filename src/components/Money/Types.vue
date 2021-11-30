@@ -12,45 +12,23 @@
 
 <script lang="ts">
 import Vue from "vue";
-import {Component} from "vue-property-decorator";
+import {Component, Prop} from "vue-property-decorator";
+
 @Component
-@Component({
-  props:{
-    propMessage:String
-  }
-})
 export default class types extends Vue {
   type = '-' //'-'表示指出，‘+’表示收入
-  helloMsg = 'hello,'+this.propMessage;
   selectType(type:string) {
     if (type !== '-' && type !== '+') {
       throw new Error('type is unknown');
     }
     this.type = type;
   }
+  mounted(){
+    console.log(this.xxx);
+  }
 }
 
 
-/*export default {
-  name: 'Types',
-  props:['xxx'],
-  data(){
-    return{
-      type:'-'//'-'表示指出，‘+’表示收入
-    }
-  },
-  mounted() {
-    console.log(this.xxx);
-  },
-  methods:{
-    selectType(type){ // type 只能是 ‘-’和‘+’中的一个
-      if (type !=='-' && type !=='+'){
-        throw new Error('type is unknown')
-      }
-      this.type = type
-    }
-  }
-};*/
 </script>
 
 <style lang="scss" scoped>
