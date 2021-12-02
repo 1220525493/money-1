@@ -4,10 +4,10 @@ type Tag = {
   name:string;
 }
 type  TagListModel = {
-  data:Tag[],
-  fetch:()=> Tag[]
+  data:Tag[];
+  fetch:()=> Tag[];
   create:(name:string) => 'success'|'duplicated';
-  save:() => void
+  save:() => void;
 }
 const tagListModel:TagListModel={
   data:[],
