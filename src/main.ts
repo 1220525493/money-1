@@ -13,6 +13,9 @@ Vue.config.productionTip = false;
 
 
 window.tagList = tagListModel.fetch();
+window.findTag =(id:string)=>{
+  return   window.tagList.filter(t=> t.id ===id)[0];
+}
 window.createTag =(name:string)=>{
   const message= tagListModel.create(name)
   if (message === 'duplicated') {
@@ -20,7 +23,14 @@ window.createTag =(name:string)=>{
   }else if (message === 'success'){
     window.alert('添加成功')
   }
+};
+window.removeTag=(id:string)=>{
+    return tagListModel.remove(id);
 }
+window.updateTag=(id:string,name:string)=>{
+ return   tagListModel.update(id,name);
+}
+
 Vue.component('Nav',Nav)
 Vue.component('Layout',Layout);
 Vue.component('Icon',Icon)
