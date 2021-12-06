@@ -26,7 +26,7 @@ import tagListModel from '@/models/tagListModel';
 
 
 const recordList =recordListModel.fetch();
-const tagList = tagListModel.fetch()
+const tagList = tagListModel.fetch();
 
 @Component({
   components: {Tags,  FromItem, Types, NumberPad},
@@ -43,13 +43,11 @@ export default class Money extends Vue{
    this.record.notes=value;
   }
   saveRecord(){
-    const record2:RecordItem =recordListModel.clone(this.record);
-    record2.createdAt = new Date();
-    this.recordList.push(record2)
+  recordListModel.create(this.record)
   }
   @Watch('recordList')
   onRecordListChange(){
-    recordListModel.save(this.recordList);
+    recordListModel.save();
   }
 
 }

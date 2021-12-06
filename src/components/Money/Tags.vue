@@ -50,16 +50,17 @@ export default class Tags extends Vue{
     display: flex;
     flex-wrap: wrap;
     > li{
-      background:#d9d9d9;
+      $bg:green;
+      background: $bg;
       $h:24px;
       height: $h;
       line-height: $h;
-      border-radius:$h/2;
+      border-radius: $h/2;
       padding: 0 16px;
       margin-right: 12px;
       margin-top:4px ;
       &.selected{
-        background: pink;
+       background: pink;
       }
     }
   }
