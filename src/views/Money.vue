@@ -16,7 +16,6 @@
 
 <script  lang="ts">
 import NumberPad from "@/components/Money/NumberPad.vue";
-import Types from "@/components/Money/Types.vue";
 import FromItem from "@/components/Money/FromItem.vue";
 import Tags from "@/components/Money/Tags.vue";
 import {Component, Vue,} from "vue-property-decorator";
@@ -28,7 +27,7 @@ import Tabs from "@/components/Tabs.vue";
 
 
 @Component({
-  components: {Tabs, Tags,  FromItem, Types, NumberPad},
+  components: {Tabs, Tags,  FromItem,  NumberPad},
 })
 export default class Money extends Vue{
   get recordList(){
