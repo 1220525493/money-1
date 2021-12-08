@@ -1,7 +1,7 @@
 <template>
   <button class="button" @click="$emit('click',$event)" ><slot/></button>
 </template>
-<script>
+<script lang="ts">
 import Vue from 'vue';
 import {Component} from 'vue-property-decorator';
 
