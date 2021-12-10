@@ -1,14 +1,14 @@
 <template>
   <div>
     <Layout class-prefix="layout">
-     <NumberPad :value.sync="record.amount" @submit="saveRecord" />
+      <NumberPad :value.sync="record.amount" @submit="saveRecord" />
       <Tabs :data-source="typeList" :value.sync="record.type"/>
       <div class="notes">
         <FromItem field-name="备注"
                   placeholder="在这里输入备注"
                   @update:value="onUpdateNotes"/>
       </div>
-     <Tags/>
+      <Tags/>
     </Layout>
   </div>
 
@@ -51,7 +51,7 @@ export default class Money extends Vue{
 }
 </script>
 <style lang="scss" scoped>
-.layout-content{
+::v-deep .layout-content{
 display: flex;
   flex-direction: column-reverse;
 }
