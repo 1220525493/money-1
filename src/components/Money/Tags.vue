@@ -54,10 +54,9 @@ export default class Tags extends mixins(TagHelper) {
     > li {
       $bg: #D9D9D9;
       background: white;
-      $h: 24px;
-      height: $h;
-      line-height: $h;
-      border-radius: $h/2;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 24-12px;
       padding: 0 16px;
       margin-right: 12px;
       margin-top: 4px;
