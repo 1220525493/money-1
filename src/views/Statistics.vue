@@ -1,7 +1,7 @@
 <template>
 
     <Layout>
-      <Tabs class-prefix="type" :data-source="typeList" :value.sync="type"/>
+      <Tabs class-prefix="type" :data-source="typeList" :value.sync="type" />
 
         <ol v-if="groupedList.length>0">
           <li v-for="(group,index) in groupedList" :key="index">
@@ -97,9 +97,8 @@ export default class Statistics extends Vue{
 }
 ::v-deep {
   .type-tabs-item {
-    background: yellow;
-
-    color: #333333;
+    transition: 256ms all;
+    color: #42b983;
 
     &.selected {
       background: whitesmoke;
@@ -109,6 +108,19 @@ export default class Statistics extends Vue{
       }
     }
   }
+  .type-tabs-item:before{
+    content: '';
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    transition: 256ms all;
+    z-index: -1;
+    background-size: 200% 100%;
+    background-position: left center;
+  }
+
   .interval-tabs-item{
     height: 48px;
   }

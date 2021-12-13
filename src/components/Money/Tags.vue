@@ -50,9 +50,10 @@ export default class Tags extends mixins(TagHelper) {
   > .current {
     display: flex;
     flex-wrap: wrap;
+    color: rgb(57,194,75);
     > li {
       $bg: #D9D9D9;
-      background: $bg;
+      background: white;
       $h: 24px;
       height: $h;
       line-height: $h;
@@ -63,6 +64,7 @@ export default class Tags extends mixins(TagHelper) {
       &.selected {
         background: darken($bg, 50%);
         color: white;
+
       }
     }
   }

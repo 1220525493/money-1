@@ -3,8 +3,8 @@
     <Layout class-prefix="layout">
       <NumberPad :value.sync="record.amount" @submit="saveRecord" />
       <Tabs :data-source="typeList" :value.sync="record.type"/>
-      <div class="notes">
-        <FromItem field-name="备注"
+      <div class="notes" >
+        <FromItem  field-name="备注"
                   placeholder="在这里输入备注"
                   :value.sync="record.notes"/>
       </div>
